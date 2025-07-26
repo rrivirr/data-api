@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    container_name: data-api-container
+    image: data-api
+    ports:
+      - "8000:8000"

@@ -1,0 +1,8 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: data-api
+spec:
+  prefix: /data/
+  service: data-api
+  rewrite: /
