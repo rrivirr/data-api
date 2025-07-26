@@ -3,6 +3,7 @@ import { readingsQuerySchema } from "./schema";
 import { euiSchema } from "../generic.schema";
 import * as readingService from "../../service/reading.service";
 import { stringify } from "csv-stringify/sync";
+import { HttpException } from "../../utils/http-exception";
 
 export const getReadings = async (req: Request, res: Response) => {
   const params = euiSchema.parse(req.params);
@@ -17,6 +18,10 @@ export const getReadings = async (req: Request, res: Response) => {
 
   if (format === "json") {
     return res.json(formattedReadings);
+  }
+
+  if (!formattedReadings.length) {
+    throw new HttpException(404, "no data found for the specified parameters");
   }
 
   const csv = stringify(formattedReadings, { header: true });
