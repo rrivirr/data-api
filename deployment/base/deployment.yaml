@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-api
+  labels:
+    app: data-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-api
+  template:
+    metadata:
+      labels:
+        app: data-api
+    spec:
+      containers:
+        - name: data-api
+          image: rrivirr/data-api:1.0.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: DATABASE_URL
+              value: notspecified
+            - name: DATABASE_SCHEMA
+              value: rriv
