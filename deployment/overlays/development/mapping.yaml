@@ -1,15 +1,8 @@
----
-apiVersion: getambassador.io/v2
+apiVersion: getambassador.io/v3alpha1
 kind: Mapping
 metadata:
-  name: SERVICE
+  name: data-api
 spec:
-  cors:
-    cors:
-    origins:
-      - "*"
-    headers:
-      - Content-Type
-      - Authorization
-    methods:
-      - "GET, POST, PATCH, PUT, OPTIONS, DELETE"
+  hostname: "*"
+  prefix: /data/
+  service: data-api
