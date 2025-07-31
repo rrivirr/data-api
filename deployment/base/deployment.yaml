@@ -14,9 +14,11 @@ spec:
       labels:
         app: data-api
     spec:
+      imagePullSecrets:
+        - name: registry-rriv
       containers:
         - name: data-api
-          image: rrivirr/data-api:1.0.0
+          image: registry.digitalocean.com/rriv/data-api 
           ports:
             - containerPort: 80
           env:
