@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/rrivirr/data-api/compare/v1.0.0...v1.0.1) (2026-07-06)
+
+
+### Bug Fixes
+
+* audit fix lockfile ([ad626d0](https://github.com/rrivirr/data-api/commit/ad626d088aeb9bc325ed3f5f271442d6124682bc))
+
 # 1.0.0 (2026-07-06)
 
 
