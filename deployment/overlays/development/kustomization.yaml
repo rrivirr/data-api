@@ -4,3 +4,6 @@ resources:
 - ../../base
 patches:
 - path: mapping.yaml
+images:
+- name: registry.digitalocean.com/rriv/data-api
+  newTag: 1.0.1
