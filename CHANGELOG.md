@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/rrivirr/data-api/compare/v1.0.2...v1.0.3) (2026-07-07)
+
+
+### Bug Fixes
+
+* corrected folder name ([7798bfe](https://github.com/rrivirr/data-api/commit/7798bfe6315461f96aec5bf814d8711387cb3fe2))
+
 ## [1.0.2](https://github.com/rrivirr/data-api/compare/v1.0.1...v1.0.2) (2026-07-07)
 
 
