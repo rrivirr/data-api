@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/rrivirr/data-api/compare/v1.0.1...v1.0.2) (2026-07-07)
+
+
+### Bug Fixes
+
+* update package-lock ([5308fa2](https://github.com/rrivirr/data-api/commit/5308fa2021c130a0730a76968ae60440f19f4425))
+
 ## [1.0.1](https://github.com/rrivirr/data-api/compare/v1.0.0...v1.0.1) (2026-07-06)
 
 
