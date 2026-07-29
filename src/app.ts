@@ -10,13 +10,12 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
     if (req.headers["content-type"] !== "application/json") {
       throw new HttpException(
         415,
-        "Invalid content type. API only supports application/json"
+        "Invalid content type. API only supports application/json",
       );
     }
   }
   next();
 });
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(routes);
