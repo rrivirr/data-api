@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/rrivirr/data-api/compare/v1.0.3...v1.0.4) (2026-07-29)
+
+
+### Bug Fixes
+
+* trigger release ([6ee0a88](https://github.com/rrivirr/data-api/commit/6ee0a889cf01337515cd63caf9b6e4fcb3cd98e2))
+
 ## [1.0.3](https://github.com/rrivirr/data-api/compare/v1.0.2...v1.0.3) (2026-07-07)
 
 
