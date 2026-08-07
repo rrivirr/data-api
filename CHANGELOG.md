@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/rrivirr/data-api/compare/v1.0.4...v1.0.5) (2026-08-07)
+
+
+### Bug Fixes
+
+* workflow ([202bf46](https://github.com/rrivirr/data-api/commit/202bf4697eafe51dedfcbc9b147e6dfedca798e2))
+
 ## [1.0.4](https://github.com/rrivirr/data-api/compare/v1.0.3...v1.0.4) (2026-07-29)
 
 
