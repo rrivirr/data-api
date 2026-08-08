@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/rrivirr/data-api/compare/v1.0.5...v1.0.6) (2026-08-08)
+
+
+### Bug Fixes
+
+* **workflow:** naming ([55dcdf3](https://github.com/rrivirr/data-api/commit/55dcdf3c9b5109598c2ce240737f928a9fce3226))
+
 ## [1.0.5](https://github.com/rrivirr/data-api/compare/v1.0.4...v1.0.5) (2026-08-07)
 
 
