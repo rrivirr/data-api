@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/rrivirr/data-api/compare/v1.0.7...v1.0.8) (2026-09-23)
+
+
+### Bug Fixes
+
+* switch to distroless ([4a67eba](https://github.com/rrivirr/data-api/commit/4a67ebaf3d708de8201a74afbb51c683f981d760))
+
 ## [1.0.7](https://github.com/rrivirr/data-api/compare/v1.0.6...v1.0.7) (2026-08-20)
 
 
