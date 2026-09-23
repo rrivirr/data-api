@@ -1,3 +1,17 @@
+## [1.0.7](https://github.com/rrivirr/data-api/compare/v1.0.6...v1.0.7) (2026-08-20)
+
+
+### Bug Fixes
+
+* use node alpine to reduce docker image size ([10714aa](https://github.com/rrivirr/data-api/commit/10714aa1d42cc43383a1b7e67dbc456ef1fcd09e))
+
+## [1.0.6](https://github.com/rrivirr/data-api/compare/v1.0.5...v1.0.6) (2026-08-08)
+
+
+### Bug Fixes
+
+* **workflow:** naming ([55dcdf3](https://github.com/rrivirr/data-api/commit/55dcdf3c9b5109598c2ce240737f928a9fce3226))
+
 ## [1.0.5](https://github.com/rrivirr/data-api/compare/v1.0.4...v1.0.5) (2026-08-07)
 
 
