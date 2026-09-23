@@ -1,6 +1,7 @@
 import winston from "winston";
+import config from "./infra/get-config";
 
-const logLevel = process.env.LOG_LEVEL ?? "info";
+const logLevel = config.LOG_LEVEL ?? "info";
 
 const logger = winston.createLogger({
   level: logLevel,

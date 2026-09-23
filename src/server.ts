@@ -1,7 +1,8 @@
 import "dotenv/config";
 import app from "./app";
+import config from "./infra/get-config";
 
-const port = process.env.NODE_PORT || 3006;
+const port = config.NODE_PORT || 3006;
 
 app.listen(port, () => {
   console.log(`running on port ${port}`);
