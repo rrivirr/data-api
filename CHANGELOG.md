@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/rrivirr/data-api/compare/v1.0.10...v1.0.11) (2026-09-27)
+
+
+### Bug Fixes
+
+* update cors regex ([8c21795](https://github.com/rrivirr/data-api/commit/8c21795ccff48b0311b8c288691b672d00063cc6))
+
 ## [1.0.10](https://github.com/rrivirr/data-api/compare/v1.0.9...v1.0.10) (2026-09-27)
 
 
