@@ -1,8 +1,12 @@
 import { NextFunction, Request, Response } from "express";
+import config from "../infra/get-config";
 
-const DEFAULT_ALLOWED_ORIGINS = "http://localhost:5173, https://*.rriv.org";
+const ALLOWED_ORIGINS =
+  config.NODE_ENV === "production"
+    ? "https://*.rriv.org"
+    : "http://localhost:5173";
 
-const allowedOriginPatterns = DEFAULT_ALLOWED_ORIGINS.split(",").map((origin) =>
+const allowedOriginPatterns = ALLOWED_ORIGINS.split(",").map((origin) =>
   origin.trim(),
 );
 

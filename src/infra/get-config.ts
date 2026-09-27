@@ -10,17 +10,20 @@ const readSchema = z.strictObject({
     .enum(["error", "warn", "info", "http", "verbose", "debug", "silly"])
     .optional(),
   DATABASE_URL: z.string(),
+  NODE_ENV: z.enum(["production", "development"]).default("development"),
 });
 
 const getConfigValues = () => {
   const DATABASE_URL = process.env.DATABASE_URL;
   const NODE_PORT = process.env.NODE_PORT;
   const LOG_LEVEL = process.env.LOG_LEVEL;
+  const NODE_ENV = process.env.NODE_ENV;
 
   const envConfig = {
     ...(DATABASE_URL && { DATABASE_URL }),
     ...(NODE_PORT && { NODE_PORT }),
     ...(LOG_LEVEL && { LOG_LEVEL }),
+    ...(NODE_ENV && { NODE_ENV }),
   };
 
   const dirPath = path.join(homedir(), ".data-api");
