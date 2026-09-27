@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/rrivirr/data-api/compare/v1.0.9...v1.0.10) (2026-09-27)
+
+
+### Bug Fixes
+
+* add cors support ([2723266](https://github.com/rrivirr/data-api/commit/27232664012634c576c6af6811ca867caf5f9fbe))
+
 ## [1.0.9](https://github.com/rrivirr/data-api/compare/v1.0.8...v1.0.9) (2026-09-23)
 
 
