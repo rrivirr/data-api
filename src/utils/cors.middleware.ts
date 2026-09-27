@@ -10,9 +10,10 @@ const matchesOrigin = (origin: string, pattern: string): boolean => {
   if (origin === pattern) return true;
 
   if (pattern.includes("*")) {
+    const CHAR = "[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
     const escaped = pattern
       .replace(/[.+?^${}()|[\]\\]/g, "\\$&")
-      .replace(/\*/g, "[^.]+");
+      .replace(/\*/g, `(?:${CHAR})(?:\\.${CHAR})?`);
 
     const regex = new RegExp(`^${escaped}$`, "i");
     return regex.test(origin);
