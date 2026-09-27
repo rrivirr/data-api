@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/rrivirr/data-api/compare/v1.0.11...v1.0.12) (2026-09-27)
+
+
+### Bug Fixes
+
+* support node-env for cors ([9d8fad8](https://github.com/rrivirr/data-api/commit/9d8fad84ce05418aa34bb0a51db4ac8efe492e6a))
+
 ## [1.0.11](https://github.com/rrivirr/data-api/compare/v1.0.10...v1.0.11) (2026-09-27)
 
 
