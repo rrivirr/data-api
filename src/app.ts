@@ -1,9 +1,12 @@
 import express, { NextFunction, Request, Response } from "express";
 import { HttpException } from "./utils/http-exception";
 import errorHandler from "./utils/error-handler";
+import { corsMiddleware } from "./utils/cors.middleware";
 import routes from "./routes/index";
 
 const app = express();
+
+app.use(corsMiddleware);
 
 app.use((req: Request, _res: Response, next: NextFunction) => {
   if (req.method === "POST" || req.method === "PATCH" || req.method === "PUT") {
