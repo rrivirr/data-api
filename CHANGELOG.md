@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/rrivirr/data-api/compare/v1.0.12...v1.0.13) (2026-09-28)
+
+
+### Bug Fixes
+
+* db ca crt ([878a589](https://github.com/rrivirr/data-api/commit/878a58920bda363d63eeeb3ba87ab972d84ab104))
+
 ## [1.0.12](https://github.com/rrivirr/data-api/compare/v1.0.11...v1.0.12) (2026-09-27)
 
 
