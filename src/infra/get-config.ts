@@ -10,6 +10,7 @@ const readSchema = z.strictObject({
     .enum(["error", "warn", "info", "http", "verbose", "debug", "silly"])
     .optional(),
   DATABASE_URL: z.string(),
+  DATABASE_CA_CRT: z.string().optional(),
   NODE_ENV: z.enum(["production", "development"]).default("development"),
 });
 
