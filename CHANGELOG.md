@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/rrivirr/data-api/compare/v1.1.0...v1.1.1) (2026-10-16)
+
+
+### Bug Fixes
+
+* increase limit ([b89f193](https://github.com/rrivirr/data-api/commit/b89f193c33fcf5cd32ca94344452b0e511dacdf4))
+
 # [1.1.0](https://github.com/rrivirr/data-api/compare/v1.0.13...v1.1.0) (2026-10-16)
 
 
