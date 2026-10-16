@@ -9,7 +9,7 @@ const windowSchema = z.strictObject({
 export const readingsQuerySchema = z.strictObject({
   windows: z.array(windowSchema).min(1).max(1000),
   format: z.enum(["csv", "json"]).default("json"),
-  limit: z.number().int().min(1).max(100000).default(1000),
+  limit: z.number().int().min(1).max(100000).default(100000),
   offset: z.number().int().min(0).default(0),
   order: z.enum(["asc", "desc"]).default("desc"),
 });
