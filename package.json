@@ -9,6 +9,7 @@
     "lint": "eslint ./src",
     "lint:fix": "npm run lint -- --fix",
     "build": "rimraf dist && tsc",
+    "test": "vitest run",
     "start": "node dist/server.js",
     "start:dev": "nodemon --exec tsx src/server.ts"
   },
@@ -16,6 +17,7 @@
     "csv-stringify": "^6.6.0",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
+    "jose": "^6.2.12",
     "kysely": "^0.28.3",
     "pg": "^8.16.3",
     "rimraf": "^6.0.1",
@@ -37,7 +39,8 @@
     "nodemon": "^3.1.10",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0"
+    "typescript-eslint": "^8.38.0",
+    "vitest": "^5.0.4"
   },
   "version": "1.0.13"
 }

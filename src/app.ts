@@ -1,12 +1,10 @@
 import express, { NextFunction, Request, Response } from "express";
 import { HttpException } from "./utils/http-exception";
 import errorHandler from "./utils/error-handler";
-import { corsMiddleware } from "./utils/cors.middleware";
+import { jwtMiddleware } from "./utils/jwt.middleware";
 import routes from "./routes/index";
 
 const app = express();
-
-app.use(corsMiddleware);
 
 app.use((req: Request, _res: Response, next: NextFunction) => {
   if (req.method === "POST" || req.method === "PATCH" || req.method === "PUT") {
@@ -19,6 +17,8 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
   }
   next();
 });
+
+app.use(jwtMiddleware);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(routes);

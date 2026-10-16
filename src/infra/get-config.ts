@@ -12,6 +12,8 @@ const readSchema = z.strictObject({
   DATABASE_URL: z.string(),
   DATABASE_CA_CRT: z.string().optional(),
   NODE_ENV: z.enum(["production", "development"]).default("development"),
+  KEYCLOAK_URL: z.url(),
+  KEYCLOAK_REALM: z.string(),
 });
 
 const getConfigValues = () => {
@@ -19,12 +21,16 @@ const getConfigValues = () => {
   const NODE_PORT = process.env.NODE_PORT;
   const LOG_LEVEL = process.env.LOG_LEVEL;
   const NODE_ENV = process.env.NODE_ENV;
+  const KEYCLOAK_URL = process.env.KEYCLOAK_URL;
+  const KEYCLOAK_REALM = process.env.KEYCLOAK_REALM;
 
   const envConfig = {
     ...(DATABASE_URL && { DATABASE_URL }),
     ...(NODE_PORT && { NODE_PORT }),
     ...(LOG_LEVEL && { LOG_LEVEL }),
     ...(NODE_ENV && { NODE_ENV }),
+    ...(KEYCLOAK_URL && { KEYCLOAK_URL }),
+    ...(KEYCLOAK_REALM && { KEYCLOAK_REALM }),
   };
 
   const dirPath = path.join(homedir(), ".data-api");

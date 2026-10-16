@@ -1,13 +1,23 @@
 import { db } from "../infra/db/db";
-import { QueryReadingsDto } from "../types/reading.types";
+import type { ReadingsQuery, ReadingWindow } from "../handler/reading/schema";
 
-export const getReadings = async (query: QueryReadingsDto) => {
-  const { limit, order, rangeStart, rangeEnd, offset, eui } = query;
+export const getReadingsInWindows = async (
+  query: Omit<ReadingsQuery, "format">,
+) => {
+  const { windows, limit, offset, order } = query;
   return await db
     .selectFrom("events")
-    .where("eui", "=", eui)
-    .where("time", ">=", rangeStart)
-    .$if(!!rangeEnd, (qb) => qb.where("time", "<=", rangeEnd!))
+    .where((eb) =>
+      eb.or(
+        windows.map((window: ReadingWindow) =>
+          eb.and([
+            eb("eui", "=", window.eui),
+            eb("time", ">=", window.start),
+            ...(window.end ? [eb("time", "<=", window.end)] : []),
+          ]),
+        ),
+      ),
+    )
     .orderBy("created_at", order)
     .limit(limit)
     .offset(offset)

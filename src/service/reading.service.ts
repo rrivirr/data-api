@@ -1,6 +1,8 @@
-import { QueryReadingsDto } from "../types/reading.types";
+import type { ReadingsQuery } from "../handler/reading/schema";
 import * as readingRepository from "../repository/reading.repository";
 
-export const getReadings = async (query: QueryReadingsDto) => {
-  return await readingRepository.getReadings(query);
+export const getReadingsInWindows = async (
+  query: Omit<ReadingsQuery, "format">,
+) => {
+  return await readingRepository.getReadingsInWindows(query);
 };

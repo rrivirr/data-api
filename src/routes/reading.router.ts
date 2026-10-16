@@ -1,10 +1,10 @@
 import express from "express";
-import { getReadings } from "../handler/reading/handler";
+import { queryReadings } from "../handler/reading/handler";
 
 const router = express.Router();
 const routerWrapper = express.Router();
 
-router.route("/:eui").get(getReadings);
+router.post("/", queryReadings);
 
 routerWrapper.use("/readings", router);
 

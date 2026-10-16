@@ -1,21 +1,18 @@
 import { z } from "zod";
-import { getPaginationSchema } from "../generic.schema";
 
-export const readingsQuerySchema = z
-  .strictObject({
-    format: z.enum(["csv", "json"]).default("json"),
-    rangeStart: z.coerce.date().default(new Date(Date.now() - 5 * 60 * 1000)),
-    rangeEnd: z.coerce.date().optional(),
-    ...getPaginationSchema(["createdAt"], "createdAt").shape,
-  })
-  .check((ctx) => {
-    const { rangeStart, rangeEnd } = ctx.value;
-    if (rangeEnd && +rangeEnd < +rangeStart) {
-      ctx.issues.push({
-        code: "custom",
-        message: `Date Range Validation Failed; start ${rangeStart.toISOString()}, end ${rangeEnd.toISOString()}`,
-        input: ctx.value,
-        path: ["rangeStart", "rangeEnd"],
-      });
-    }
-  });
+const windowSchema = z.strictObject({
+  eui: z.string().min(1),
+  start: z.coerce.date(),
+  end: z.coerce.date().nullable(),
+});
+
+export const readingsQuerySchema = z.strictObject({
+  windows: z.array(windowSchema).min(1).max(1000),
+  format: z.enum(["csv", "json"]).default("json"),
+  limit: z.number().int().min(1).max(100000).default(1000),
+  offset: z.number().int().min(0).default(0),
+  order: z.enum(["asc", "desc"]).default("desc"),
+});
+
+export type ReadingsQuery = z.infer<typeof readingsQuerySchema>;
+export type ReadingWindow = z.infer<typeof windowSchema>;
