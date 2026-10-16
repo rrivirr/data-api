@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rrivirr/data-api/compare/v1.0.13...v1.1.0) (2026-10-16)
+
+
+### Features
+
+* auth and query rewrite ([8e5c8ea](https://github.com/rrivirr/data-api/commit/8e5c8ea56086946a59ee36662415bf26aab5f3a6))
+
 ## [1.0.13](https://github.com/rrivirr/data-api/compare/v1.0.12...v1.0.13) (2026-09-28)
 
 
