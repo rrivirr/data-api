@@ -47,7 +47,7 @@ describe("getReadingsInWindows", () => {
 
     expect(queries).toHaveLength(1);
     expect(queries[0].sql).toBe(
-      'select "time", "values" from "events" where (("eui" = $1 and "time" >= $2 and "time" <= $3) or ("eui" = $4 and "time" >= $5)) order by "created_at" asc limit $6 offset $7',
+      'select "time", "values" from "events" where (("eui" = $1 and "time" >= $2 and "time" < $3) or ("eui" = $4 and "time" >= $5)) order by "created_at" asc limit $6 offset $7',
     );
     expect(queries[0].parameters).toEqual(["aBc1", start, end, "E2", open, 50, 10]);
   });

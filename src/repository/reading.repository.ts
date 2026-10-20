@@ -13,7 +13,7 @@ export const getReadingsInWindows = async (
           eb.and([
             eb("eui", "=", window.eui),
             eb("time", ">=", window.start),
-            ...(window.end ? [eb("time", "<=", window.end)] : []),
+            ...(window.end ? [eb("time", "<", window.end)] : []),
           ]),
         ),
       ),
