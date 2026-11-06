@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/rrivirr/data-api/compare/v1.1.2...v1.1.3) (2026-11-06)
+
+
+### Bug Fixes
+
+* update vault role ([c3acbaa](https://github.com/rrivirr/data-api/commit/c3acbaa23099b1ff0f417b79640071a309652f91))
+
 ## [1.1.2](https://github.com/rrivirr/data-api/compare/v1.1.1...v1.1.2) (2026-10-20)
 
 
