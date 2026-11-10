@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/rrivirr/data-api/compare/v1.1.3...v1.1.4) (2026-11-10)
+
+
+### Bug Fixes
+
+* deployment ([7466463](https://github.com/rrivirr/data-api/commit/74664638bed829a1c4a609bba235fafd5733bda5))
+
 ## [1.1.3](https://github.com/rrivirr/data-api/compare/v1.1.2...v1.1.3) (2026-11-06)
 
 
