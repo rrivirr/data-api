@@ -6,10 +6,11 @@ spec:
   template:
     metadata:
       annotations:
-        vault.hashicorp.com/agent-inject-secret-credentials.txt: "secret/data/data-api-creds"
-        vault.hashicorp.com/agent-inject-template-credentials: |
+        vault.hashicorp.com/agent-inject-secret-config: "secret/data/data-api-creds"
+        vault.hashicorp.com/agent-inject-template-config: |
           {{ with secret "secret/data/data-api-creds" }}
-          export DATABASE_URL={{ .Data.data.database_url }}
+          DATABASE_URL="{{ .Data.data.database_url }}"
+          DATABASE_CA_CRT="{{ .Data.data.database_ca_cert }}"
           {{ end }}
     spec:
       containers:
