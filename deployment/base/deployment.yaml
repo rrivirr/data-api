@@ -15,6 +15,7 @@ spec:
         app: data-api
       annotations:
         vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/agent-pre-populate-only: "true"
         vault.hashicorp.com/role: "data-api"
         vault.hashicorp.com/auth-path: "auth/kubernetes-rriv"
         vault.hashicorp.com/agent-requests-cpu: "10m"
@@ -25,8 +26,8 @@ spec:
         vault.hashicorp.com/agent-inject-secret-config: "secret/data/data-api-creds"
         vault.hashicorp.com/agent-inject-template-config: |
           {{ with secret "secret/data/data-api-creds" }}
-          export DATABASE_URL={{ .Data.data.database_url }}
-          export DATABASE_CA_CRT="{{ .Data.data.database_ca_cert }}"
+          DATABASE_URL="{{ .Data.data.database_url }}"
+          DATABASE_CA_CRT="{{ .Data.data.database_ca_cert }}"
           {{ end }}
 
     spec:
