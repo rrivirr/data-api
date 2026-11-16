@@ -1,3 +1,9 @@
+## [1.1.5](https://github.com/rrivirr/data-api/compare/v1.1.4...v1.1.5) (2026-11-16)
+
+### Bug Fixes
+
+* deployment overlay writes ([650dff5](https://github.com/rrivirr/data-api/commit/650dff54901284a9512bfad7ec37b95c6e07cc2b))
+
 ## [1.1.4](https://github.com/rrivirr/data-api/compare/v1.1.3...v1.1.4) (2026-11-10)
 
 
